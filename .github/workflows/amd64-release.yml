@@ -15,6 +15,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Maximize build space
+        uses: easimon/maximize-build-space@master
+
       - name: Pull Docker Images and Package
         run: |
           images="${{ github.event.inputs.docker_images }}"
